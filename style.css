@@ -73,8 +73,7 @@ img {
     background-color: var(--color-brand);
     color: var(--color-base);
 }
-
-/* NAVBAR */
+ /* NAVBAR */
 .navbar {
     background-color: var(--color-base);
 }
@@ -83,6 +82,7 @@ img {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .navbar .nav-link:hover {
@@ -93,14 +93,20 @@ img {
     color: var(--color-brand);
 }
 
-.navbar-brand img :hover{
+/* Corrected Hover State on Logo Image */
+.navbar-brand img:hover {
     border: 8px solid var(--color-brand);
+    transition: border 0.3s ease; /* Smooth transition on hover */
 }
+
 @media (min-width: 992px) {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(54, 3, 71, 0.8), rgba(0, 0, 0, 0.562)), url(./imgaes/3.png);
+        background: linear-gradient(
+            rgba(54, 3, 71, 0.8), 
+            rgba(0, 0, 0, 0.562)
+        ), url(./imgaes/3.png);
         background-size: cover;
         background-position: center;
     }
@@ -108,11 +114,13 @@ img {
     .navbar-brand img {
         border: 8px solid var(--color-brand);
     }
-     /* CONTENT WRAPPER */
-     #content-wrapper {
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
         padding-left: var(--sidbar-width);
     }
 }
+
 /* BTN */
 .btn {
     padding: 12px 28px;
